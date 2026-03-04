@@ -7,7 +7,7 @@
   <meta name="description" content="Clínica de estética em Jaraguá - SC. Botox, harmonização facial, preenchimento labial e tratamentos corporais. Agende sua avaliação pelo WhatsApp.">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;0,700;1,400&family=Outfit:wght@300;400;500;600&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
   <script src="https://cdn.tailwindcss.com"></script>
   <script>
     tailwind.config = {
@@ -16,14 +16,6 @@
           fontFamily: {
             heading: ['Cormorant Garamond', 'serif'],
             body: ['Outfit', 'sans-serif']
-          },
-          colors: {
-            'rose-gold': '#b76e79',
-            'nude': {
-              50: '#f5efed',
-              100: '#ede5e2',
-              DEFAULT: '#e8d5d0'
-            }
           }
         }
       }
@@ -31,18 +23,26 @@
   </script>
   <link rel="stylesheet" href="style.css">
 </head>
-<body class="font-body text-gray-700 antialiased">
+<body class="theme-natural font-body antialiased">
   <a href="#main" class="skip-link">Ir para o conteúdo</a>
 
   <header class="fixed top-0 left-0 right-0 z-50 transition-all duration-300" id="header">
     <nav class="container mx-auto px-4 py-4 flex items-center justify-between">
-      <a href="#" class="font-heading text-xl font-semibold text-rose-gold">Clínica Estética</a>
+      <a href="#" class="font-heading text-xl font-semibold text-brand">Clínica Estética</a>
       <ul class="hidden md:flex gap-8">
         <li><a href="#sobre" class="nav-link">Sobre</a></li>
         <li><a href="#procedimentos" class="nav-link">Procedimentos</a></li>
         <li><a href="#depoimentos" class="nav-link">Depoimentos</a></li>
         <li><a href="#localizacao" class="nav-link">Localização</a></li>
       </ul>
+      <div class="theme-switcher flex items-center gap-2" role="group" aria-label="Escolher tema visual">
+        <span class="theme-switcher-label text-sm text-muted hidden lg:inline">Tema:</span>
+        <div class="theme-switcher-buttons flex rounded-full border border-[var(--primary)] p-0.5">
+          <button type="button" class="theme-btn rounded-full px-3 py-1.5 text-xs font-medium transition-colors" data-theme="theme-natural" title="Tema Natural">Natural</button>
+          <button type="button" class="theme-btn rounded-full px-3 py-1.5 text-xs font-medium transition-colors" data-theme="theme-luxo" title="Tema Luxo">Luxo</button>
+          <button type="button" class="theme-btn rounded-full px-3 py-1.5 text-xs font-medium transition-colors" data-theme="theme-clean" title="Tema Clean">Clean</button>
+        </div>
+      </div>
       <a href="#" class="btn-whatsapp-header hidden md:inline-flex items-center gap-2 px-5 py-2.5 rounded-full text-sm font-medium" onclick="sendToWhatsApp('Olá, vim pelo site e gostaria de agendar uma avaliação.'); return false;">Agendar</a>
     </nav>
   </header>
@@ -53,10 +53,10 @@
       <div class="container mx-auto px-4 py-24 md:py-32 flex flex-col lg:flex-row items-center gap-12 lg:gap-16">
         <div class="flex-1 text-center lg:text-left animate-fade-in">
           <span class="badge-premium inline-block mb-4">Especialista certificada</span>
-          <h1 class="font-heading text-4xl md:text-5xl lg:text-6xl font-semibold text-gray-800 leading-tight mb-6">
+          <h1 class="font-heading text-4xl md:text-5xl lg:text-6xl font-semibold text-main leading-tight mb-6">
             Realce sua beleza com naturalidade e tecnologia avançada
           </h1>
-          <p class="text-lg md:text-xl text-gray-600 mb-8 max-w-xl mx-auto lg:mx-0">
+          <p class="text-lg md:text-xl text-muted mb-8 max-w-xl mx-auto lg:mx-0">
             Tratamentos personalizados em Jaraguá - SC. Resultados que valorizam quem você é.
           </p>
           <div class="flex flex-col sm:flex-row gap-4 justify-center lg:justify-start">
@@ -66,67 +66,67 @@
             <a href="#procedimentos" class="btn-secondary">Ver Procedimentos</a>
           </div>
           <div class="mt-10 flex flex-wrap gap-6 justify-center lg:justify-start items-center">
-            <div class="flex items-center gap-2 text-gray-600">
+            <div class="flex items-center gap-2 text-muted">
               <span class="stars">★★★★★</span>
               <span class="text-sm font-medium">Avaliação 5 estrelas no Google</span>
             </div>
-            <div class="counter-display text-rose-gold font-heading text-2xl font-semibold" data-target="500">0</div>
-            <span class="text-gray-600">clientes atendidas</span>
+            <div class="counter-display text-brand font-heading text-2xl font-semibold" data-target="500">0</div>
+            <span class="text-muted">clientes atendidas</span>
           </div>
         </div>
         <div class="flex-1 flex justify-center animate-fade-in-delay">
           <div class="relative">
             <img src="imgs/hero.jpg" alt="Clínica de estética - ambiente acolhedor" class="hero-image rounded-2xl shadow-2xl w-full max-w-lg object-cover">
-            <span class="absolute -bottom-3 -right-3 bg-white/90 backdrop-blur px-4 py-2 rounded-full shadow-lg text-sm font-medium text-gray-700">Jaraguá - SC</span>
+            <span class="absolute -bottom-3 -right-3 bg-white/90 backdrop-blur px-4 py-2 rounded-full shadow-lg text-sm font-medium text-main">Jaraguá - SC</span>
           </div>
         </div>
       </div>
     </section>
 
-    <section id="prova-social" class="py-16 md:py-24 bg-white">
+    <section id="prova-social" class="py-16 md:py-24 bg-main">
       <div class="container mx-auto px-4">
         <div class="grid md:grid-cols-3 gap-8 scroll-reveal">
           <div class="card-differential p-8 rounded-2xl text-center">
-            <div class="w-16 h-16 mx-auto mb-4 rounded-full bg-rose-gold/10 flex items-center justify-center">
+            <div class="w-16 h-16 mx-auto mb-4 rounded-full bg-brand-subtle flex items-center justify-center">
               <span class="text-3xl">✨</span>
             </div>
-            <h3 class="font-heading text-xl font-semibold text-gray-800 mb-2">+5 anos de experiência</h3>
-            <p class="text-gray-600">Atendimento de excelência com foco em resultados naturais e seguros.</p>
+            <h3 class="font-heading text-xl font-semibold text-main mb-2">+5 anos de experiência</h3>
+            <p class="text-muted">Atendimento de excelência com foco em resultados naturais e seguros.</p>
           </div>
           <div class="card-differential p-8 rounded-2xl text-center">
-            <div class="w-16 h-16 mx-auto mb-4 rounded-full bg-rose-gold/10 flex items-center justify-center">
+            <div class="w-16 h-16 mx-auto mb-4 rounded-full bg-brand-subtle flex items-center justify-center">
               <span class="text-3xl">💎</span>
             </div>
-            <h3 class="font-heading text-xl font-semibold text-gray-800 mb-2">Atendimento personalizado</h3>
-            <p class="text-gray-600">Cada tratamento é planejado de forma única para o seu perfil.</p>
+            <h3 class="font-heading text-xl font-semibold text-main mb-2">Atendimento personalizado</h3>
+            <p class="text-muted">Cada tratamento é planejado de forma única para o seu perfil.</p>
           </div>
           <div class="card-differential p-8 rounded-2xl text-center">
-            <div class="w-16 h-16 mx-auto mb-4 rounded-full bg-rose-gold/10 flex items-center justify-center">
+            <div class="w-16 h-16 mx-auto mb-4 rounded-full bg-brand-subtle flex items-center justify-center">
               <span class="text-3xl">🔬</span>
             </div>
-            <h3 class="font-heading text-xl font-semibold text-gray-800 mb-2">Equipamentos modernos</h3>
-            <p class="text-gray-600">Tecnologia de ponta para procedimentos seguros e eficazes.</p>
+            <h3 class="font-heading text-xl font-semibold text-main mb-2">Equipamentos modernos</h3>
+            <p class="text-muted">Tecnologia de ponta para procedimentos seguros e eficazes.</p>
           </div>
         </div>
       </div>
     </section>
 
-    <section id="sobre" class="py-16 md:py-24 bg-nude-50">
+    <section id="sobre" class="py-16 md:py-24 bg-alt">
       <div class="container mx-auto px-4">
         <div class="max-w-5xl mx-auto flex flex-col lg:flex-row gap-12 items-center scroll-reveal">
           <div class="lg:w-2/5 flex-shrink-0">
             <img src="imgs/profissional.jpg" alt="Profissional responsável pela clínica" class="rounded-2xl shadow-xl w-full object-cover max-w-sm mx-auto">
-            <p class="text-center mt-4 text-sm font-medium text-rose-gold">Especialista certificada</p>
+            <p class="text-center mt-4 text-sm font-medium text-brand">Especialista certificada</p>
           </div>
           <div class="lg:w-3/5">
-            <h2 class="font-heading text-3xl md:text-4xl font-semibold text-gray-800 mb-6">Sobre a Clínica</h2>
-            <p class="text-gray-600 mb-4 leading-relaxed">
+            <h2 class="font-heading text-3xl md:text-4xl font-semibold text-main mb-6">Sobre a Clínica</h2>
+            <p class="text-muted mb-4 leading-relaxed">
               Nossa clínica nasceu do desejo de oferecer em Jaraguá - SC um espaço onde beleza e bem-estar se encontram com ética e técnica. Acreditamos que cada pessoa merece ser atendida com cuidado, escuta e planejamento individualizado.
             </p>
-            <p class="text-gray-600 mb-4 leading-relaxed">
+            <p class="text-muted mb-4 leading-relaxed">
               Utilizamos protocolos atualizados e equipamentos de última geração, sempre priorizando resultados naturais e a sua segurança. Nossa missão é realçar a sua melhor versão, respeitando suas características e desejos.
             </p>
-            <p class="text-gray-600 leading-relaxed">
+            <p class="text-muted leading-relaxed">
               Agende sua avaliação e descubra o que podemos fazer por você.
             </p>
             <a href="#" class="btn-primary mt-6 inline-block" onclick="sendToWhatsApp('Olá, vim pelo site e gostaria de agendar uma avaliação para conhecer a clínica.'); return false;">Agendar avaliação</a>
@@ -135,40 +135,40 @@
       </div>
     </section>
 
-    <section id="procedimentos" class="py-16 md:py-24 bg-white">
+    <section id="procedimentos" class="py-16 md:py-24 bg-main">
       <div class="container mx-auto px-4">
         <div class="text-center mb-12 scroll-reveal">
-          <h2 class="font-heading text-3xl md:text-4xl font-semibold text-gray-800 mb-4">Procedimentos</h2>
-          <p class="text-gray-600 max-w-2xl mx-auto">Tratamentos pensados para realçar sua beleza com segurança e naturalidade.</p>
+          <h2 class="font-heading text-3xl md:text-4xl font-semibold text-main mb-4">Procedimentos</h2>
+          <p class="text-muted max-w-2xl mx-auto">Tratamentos pensados para realçar sua beleza com segurança e naturalidade.</p>
         </div>
         <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-8">
           <article class="card-procedimento scroll-reveal rounded-2xl overflow-hidden shadow-lg hover:shadow-xl transition-all duration-300">
             <div class="aspect-[4/3] overflow-hidden">
-              <img src="imgs/botox.jpg" alt="Botox" class="w-full h-full object-cover transition-transform duration-500 hover:scale-105">
+              <img src="imgs/clinic-img-1.jpg" alt="Botox" class="w-full h-full object-cover transition-transform duration-500 hover:scale-105">
             </div>
             <div class="p-6">
-              <h3 class="font-heading text-xl font-semibold text-gray-800 mb-2">Botox</h3>
-              <p class="text-gray-600 text-sm mb-4">Suaviza linhas de expressão e previne o envelhecimento com resultados naturais e duradouros.</p>
+              <h3 class="font-heading text-xl font-semibold text-main mb-2">Botox</h3>
+              <p class="text-muted text-sm mb-4">Suaviza linhas de expressão e previne o envelhecimento com resultados naturais e duradouros.</p>
               <button type="button" class="btn-procedimento w-full" onclick="sendToWhatsApp('Olá, vim pelo site e gostaria de agendar Botox.')">Quero agendar este procedimento</button>
             </div>
           </article>
           <article class="card-procedimento scroll-reveal rounded-2xl overflow-hidden shadow-lg hover:shadow-xl transition-all duration-300">
             <div class="aspect-[4/3] overflow-hidden">
-              <img src="imgs/preenchimento.jpg" alt="Preenchimento labial" class="w-full h-full object-cover transition-transform duration-500 hover:scale-105">
+              <img src="imgs/clinic-img-3.jpg" alt="Preenchimento labial" class="w-full h-full object-cover transition-transform duration-500 hover:scale-105">
             </div>
             <div class="p-6">
-              <h3 class="font-heading text-xl font-semibold text-gray-800 mb-2">Preenchimento labial</h3>
-              <p class="text-gray-600 text-sm mb-4">Volume e definição dos lábios com ácido hialurônico para um resultado harmonioso.</p>
+              <h3 class="font-heading text-xl font-semibold text-main mb-2">Preenchimento labial</h3>
+              <p class="text-muted text-sm mb-4">Volume e definição dos lábios com ácido hialurônico para um resultado harmonioso.</p>
               <button type="button" class="btn-procedimento w-full" onclick="sendToWhatsApp('Olá, vim pelo site e gostaria de agendar Preenchimento labial.')">Quero agendar este procedimento</button>
             </div>
           </article>
           <article class="card-procedimento scroll-reveal rounded-2xl overflow-hidden shadow-lg hover:shadow-xl transition-all duration-300">
             <div class="aspect-[4/3] overflow-hidden">
-              <img src="imgs/limpeza.jpg" alt="Limpeza de pele" class="w-full h-full object-cover transition-transform duration-500 hover:scale-105">
+              <img src="imgs/clinic-img-2.jpg" alt="Limpeza de pele" class="w-full h-full object-cover transition-transform duration-500 hover:scale-105">
             </div>
             <div class="p-6">
-              <h3 class="font-heading text-xl font-semibold text-gray-800 mb-2">Limpeza de pele</h3>
-              <p class="text-gray-600 text-sm mb-4">Tratamento que remove impurezas, cravos e revitaliza a pele do rosto.</p>
+              <h3 class="font-heading text-xl font-semibold text-main mb-2">Limpeza de pele</h3>
+              <p class="text-muted text-sm mb-4">Tratamento que remove impurezas, cravos e revitaliza a pele do rosto.</p>
               <button type="button" class="btn-procedimento w-full" onclick="sendToWhatsApp('Olá, vim pelo site e gostaria de agendar Limpeza de pele.')">Quero agendar este procedimento</button>
             </div>
           </article>
@@ -177,8 +177,8 @@
               <img src="imgs/harmonizacao.jpg" alt="Harmonização facial" class="w-full h-full object-cover transition-transform duration-500 hover:scale-105">
             </div>
             <div class="p-6">
-              <h3 class="font-heading text-xl font-semibold text-gray-800 mb-2">Harmonização facial</h3>
-              <p class="text-gray-600 text-sm mb-4">Proporções faciais equilibradas para um rosto mais harmônico e natural.</p>
+              <h3 class="font-heading text-xl font-semibold text-main mb-2">Harmonização facial</h3>
+              <p class="text-muted text-sm mb-4">Proporções faciais equilibradas para um rosto mais harmônico e natural.</p>
               <button type="button" class="btn-procedimento w-full" onclick="sendToWhatsApp('Olá, vim pelo site e gostaria de agendar Harmonização facial.')">Quero agendar este procedimento</button>
             </div>
           </article>
@@ -187,8 +187,8 @@
               <img src="imgs/corporais.jpg" alt="Tratamentos corporais" class="w-full h-full object-cover transition-transform duration-500 hover:scale-105">
             </div>
             <div class="p-6">
-              <h3 class="font-heading text-xl font-semibold text-gray-800 mb-2">Tratamentos corporais</h3>
-              <p class="text-gray-600 text-sm mb-4">Procedimentos para contorno corporal, gordura localizada e rejuvenescimento da pele do corpo.</p>
+              <h3 class="font-heading text-xl font-semibold text-main mb-2">Tratamentos corporais</h3>
+              <p class="text-muted text-sm mb-4">Procedimentos para contorno corporal, gordura localizada e rejuvenescimento da pele do corpo.</p>
               <button type="button" class="btn-procedimento w-full" onclick="sendToWhatsApp('Olá, vim pelo site e gostaria de agendar Tratamentos corporais.')">Quero agendar este procedimento</button>
             </div>
           </article>
@@ -196,41 +196,41 @@
       </div>
     </section>
 
-    <section id="depoimentos" class="py-16 md:py-24 bg-nude-50">
+    <section id="depoimentos" class="py-16 md:py-24 bg-alt">
       <div class="container mx-auto px-4">
         <div class="text-center mb-12 scroll-reveal">
-          <h2 class="font-heading text-3xl md:text-4xl font-semibold text-gray-800 mb-4">O que nossas clientes dizem</h2>
-          <p class="text-gray-600 max-w-2xl mx-auto">Resultados reais, depoimentos reais.</p>
+          <h2 class="font-heading text-3xl md:text-4xl font-semibold text-main mb-4">O que nossas clientes dizem</h2>
+          <p class="text-muted max-w-2xl mx-auto">Resultados reais, depoimentos reais.</p>
         </div>
         <div class="grid md:grid-cols-3 gap-8">
-          <div class="card-depoimento scroll-reveal bg-white p-8 rounded-2xl shadow-lg">
-            <div class="text-rose-gold text-xl mb-4">★★★★★</div>
-            <p class="text-gray-600 mb-6 italic">"Atendimento impecável e resultados naturais. Me senti muito bem cuidada desde a primeira consulta."</p>
-            <p class="font-semibold text-gray-800">Maria F.</p>
+          <div class="card-depoimento scroll-reveal bg-main p-8 rounded-2xl shadow-lg">
+            <div class="stars-depoimento text-xl mb-4">★★★★★</div>
+            <p class="text-muted mb-6 italic">"Atendimento impecável e resultados naturais. Me senti muito bem cuidada desde a primeira consulta."</p>
+            <p class="font-semibold text-main">Maria F.</p>
           </div>
-          <div class="card-depoimento scroll-reveal bg-white p-8 rounded-2xl shadow-lg">
-            <div class="text-rose-gold text-xl mb-4">★★★★★</div>
-            <p class="text-gray-600 mb-6 italic">"Ambiente aconchegante e profissional muito atenciosa. Recomendo de olhos fechados!"</p>
-            <p class="font-semibold text-gray-800">Ana C.</p>
+          <div class="card-depoimento scroll-reveal bg-main p-8 rounded-2xl shadow-lg">
+            <div class="stars-depoimento text-xl mb-4">★★★★★</div>
+            <p class="text-muted mb-6 italic">"Ambiente aconchegante e profissional muito atenciosa. Recomendo de olhos fechados!"</p>
+            <p class="font-semibold text-main">Ana C.</p>
           </div>
-          <div class="card-depoimento scroll-reveal bg-white p-8 rounded-2xl shadow-lg">
-            <div class="text-rose-gold text-xl mb-4">★★★★★</div>
-            <p class="text-gray-600 mb-6 italic">"Fiz harmonização facial e amei o resultado. Tudo explicado com clareza e muito carinho."</p>
-            <p class="font-semibold text-gray-800">Juliana S.</p>
+          <div class="card-depoimento scroll-reveal bg-main p-8 rounded-2xl shadow-lg">
+            <div class="stars-depoimento text-xl mb-4">★★★★★</div>
+            <p class="text-muted mb-6 italic">"Fiz harmonização facial e amei o resultado. Tudo explicado com clareza e muito carinho."</p>
+            <p class="font-semibold text-main">Juliana S.</p>
           </div>
         </div>
       </div>
     </section>
 
-    <section id="localizacao" class="py-16 md:py-24 bg-white">
+    <section id="localizacao" class="py-16 md:py-24 bg-main">
       <div class="container mx-auto px-4">
         <div class="max-w-4xl mx-auto scroll-reveal">
-          <h2 class="font-heading text-3xl md:text-4xl font-semibold text-gray-800 mb-6 text-center">Onde estamos</h2>
-          <p class="text-gray-600 text-center mb-8">Joinville - SC. Venha nos visitar ou agende pelo WhatsApp.</p>
+          <h2 class="font-heading text-3xl md:text-4xl font-semibold text-main mb-6 text-center">Onde estamos</h2>
+          <p class="text-muted text-center mb-8">Joinville - SC. Venha nos visitar ou agende pelo WhatsApp.</p>
           <div class="rounded-2xl overflow-hidden shadow-xl aspect-video">
             <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3578.413889925799!2d-48.8456!3d-26.3044!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x94de8c1e2c2c2c2b%3A0x1!2sJoinville%2C%20SC!5e0!3m2!1spt-BR!2sbr!4v1234567890" width="100%" height="100%" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade" title="Localização da clínica"></iframe>
           </div>
-          <p class="mt-4 text-gray-600 text-center">Rua Exemplo, 123 – Centro · Joinville – SC</p>
+          <p class="mt-4 text-muted text-center">Rua Exemplo, 123 – Centro · Joinville – SC</p>
         </div>
       </div>
     </section>
@@ -244,30 +244,30 @@
     </section>
   </main>
 
-  <footer class="bg-gray-800 text-gray-300 py-12">
+  <footer class="footer-dark py-12">
     <div class="container mx-auto px-4">
       <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-8 mb-8">
         <div>
-          <h3 class="font-heading font-semibold text-white mb-4">Contato</h3>
+          <h3 class="font-heading font-semibold mb-4">Contato</h3>
           <p>(47) 99999-9999</p>
           <p>contato@clinicaestetica.com.br</p>
         </div>
         <div>
-          <h3 class="font-heading font-semibold text-white mb-4">Horário</h3>
+          <h3 class="font-heading font-semibold mb-4">Horário</h3>
           <p>Segunda a Sexta: 8h às 18h</p>
           <p>Sábado: 8h às 12h</p>
         </div>
         <div>
-          <h3 class="font-heading font-semibold text-white mb-4">Redes</h3>
-          <a href="https://instagram.com" target="_blank" rel="noopener noreferrer" class="block hover:text-rose-gold transition-colors">Instagram</a>
-          <a href="#" onclick="sendToWhatsApp('Olá!'); return false;" class="block hover:text-rose-gold transition-colors">WhatsApp</a>
+          <h3 class="font-heading font-semibold mb-4">Redes</h3>
+          <a href="https://instagram.com" target="_blank" rel="noopener noreferrer" class="block">Instagram</a>
+          <a href="#" onclick="sendToWhatsApp('Olá!'); return false;" class="block">WhatsApp</a>
         </div>
         <div>
-          <h3 class="font-heading font-semibold text-white mb-4">Endereço</h3>
+          <h3 class="font-heading font-semibold mb-4">Endereço</h3>
           <p>Rua Exemplo, 123 – Centro<br>Joinville – SC</p>
         </div>
       </div>
-      <div class="border-t border-gray-700 pt-8 text-center text-sm text-gray-400">
+      <div class="border-t footer-border pt-8 text-center text-sm footer-muted">
         © <span id="year"></span> Clínica Estética Jaraguá. Todos os direitos reservados.
       </div>
     </div>
@@ -279,6 +279,8 @@
     </svg>
   </a>
 
-  <script src="script.js"></script>
+  <script src="script.js">
+    setTheme('theme-luxo')
+  </script>
 </body>
 </html>
