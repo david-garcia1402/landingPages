@@ -1,0 +1,213 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --rose-gold: #b76e79;
+  --rose-gold-light: #d4a5a5;
+  --nude: #e8d5d0;
+  --nude-50: #f5efed;
+  --nude-100: #ede5e2;
+}
+
+body {
+  font-family: 'Outfit', sans-serif;
+}
+
+.font-heading {
+  font-family: 'Cormorant Garamond', serif;
+}
+
+.skip-link {
+  position: absolute;
+  left: -9999px;
+  z-index: 999;
+  padding: 1rem 1.5rem;
+  background: var(--rose-gold);
+  color: white;
+  text-decoration: none;
+  border-radius: 0.5rem;
+}
+.skip-link:focus {
+  left: 1rem;
+  top: 1rem;
+}
+
+.hero-bg {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(135deg, #fdf8f6 0%, #f5efed 40%, #ede5e2 100%);
+  z-index: -1;
+}
+
+.hero-section .hero-image {
+  min-height: 320px;
+  max-height: 480px;
+}
+
+.badge-premium {
+  background: linear-gradient(135deg, var(--rose-gold) 0%, var(--rose-gold-light) 100%);
+  color: white;
+  padding: 0.35rem 1rem;
+  border-radius: 9999px;
+  font-size: 0.875rem;
+  font-weight: 500;
+  box-shadow: 0 2px 8px rgba(183, 110, 121, 0.3);
+}
+
+.btn-primary {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0.875rem 1.75rem;
+  background: linear-gradient(135deg, var(--rose-gold) 0%, #9e5a64 100%);
+  color: white;
+  font-weight: 500;
+  border-radius: 9999px;
+  transition: transform 0.2s, box-shadow 0.2s;
+  box-shadow: 0 4px 14px rgba(183, 110, 121, 0.4);
+}
+.btn-primary:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 20px rgba(183, 110, 121, 0.5);
+}
+
+.btn-secondary {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0.875rem 1.75rem;
+  border: 2px solid var(--rose-gold);
+  color: var(--rose-gold);
+  font-weight: 500;
+  border-radius: 9999px;
+  transition: background 0.2s, color 0.2s;
+}
+.btn-secondary:hover {
+  background: var(--rose-gold);
+  color: white;
+}
+
+.btn-whatsapp-header {
+  background: #25d366;
+  color: white;
+  transition: transform 0.2s, box-shadow 0.2s;
+}
+.btn-whatsapp-header:hover {
+  transform: translateY(-1px);
+  box-shadow: 0 4px 12px rgba(37, 211, 102, 0.5);
+}
+
+.nav-link {
+  color: #374151;
+  transition: color 0.2s;
+}
+.nav-link:hover {
+  color: var(--rose-gold);
+}
+
+.card-differential {
+  background: white;
+  border: 1px solid var(--nude-100);
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+.card-differential:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 12px 24px rgba(0, 0, 0, 0.06);
+}
+
+.text-rose-gold {
+  color: var(--rose-gold);
+}
+
+.bg-rose-gold\/10 {
+  background-color: rgba(183, 110, 121, 0.1);
+}
+
+.bg-nude-50 {
+  background-color: var(--nude-50);
+}
+
+.btn-procedimento {
+  padding: 0.625rem 1rem;
+  background: transparent;
+  border: 2px solid var(--rose-gold);
+  color: var(--rose-gold);
+  font-weight: 500;
+  border-radius: 0.75rem;
+  transition: background 0.2s, color 0.2s;
+}
+.btn-procedimento:hover {
+  background: var(--rose-gold);
+  color: white;
+}
+
+.cta-section {
+  background: linear-gradient(135deg, var(--rose-gold) 0%, #8b4a54 100%);
+}
+
+.btn-cta-final {
+  padding: 1rem 2.5rem;
+  background: white;
+  color: var(--rose-gold);
+  font-weight: 600;
+  font-size: 1.125rem;
+  border-radius: 9999px;
+  transition: transform 0.2s, box-shadow 0.2s;
+  box-shadow: 0 4px 14px rgba(0, 0, 0, 0.15);
+}
+.btn-cta-final:hover {
+  transform: translateY(-2px) scale(1.02);
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.2);
+}
+
+.whatsapp-float {
+  position: fixed;
+  bottom: 1.5rem;
+  right: 1.5rem;
+  width: 56px;
+  height: 56px;
+  background: #25d366;
+  color: white;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 4px 14px rgba(37, 211, 102, 0.5);
+  z-index: 40;
+  transition: transform 0.2s, box-shadow 0.2s;
+}
+.whatsapp-float:hover {
+  transform: scale(1.08);
+  box-shadow: 0 6px 20px rgba(37, 211, 102, 0.6);
+}
+
+.scroll-reveal {
+  opacity: 0;
+  transform: translateY(24px);
+  transition: opacity 0.6s ease, transform 0.6s ease;
+}
+.scroll-reveal.revealed {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.animate-fade-in {
+  animation: fadeIn 0.8s ease forwards;
+}
+.animate-fade-in-delay {
+  animation: fadeIn 0.8s ease 0.2s forwards;
+  opacity: 0;
+}
+
+@keyframes fadeIn {
+  to {
+    opacity: 1;
+  }
+}
+
+@media (max-width: 768px) {
+  .hero-section .hero-image {
+    min-height: 280px;
+  }
+}
